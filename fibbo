@@ -1,0 +1,32 @@
+import java.util.Scanner;  
+  
+public class Fibonacci {  
+  
+    public Fibonacci() {  
+    }  
+     
+    public static void main(String [] args){  
+        int n, nacci, i;  
+        Scanner input = new Scanner(System.in);  
+        System.out.print("Batas Deret Fibbonaci = ");  
+        n = input.nextInt();  
+     
+           for(i=0; i<=n; i++)  
+           {  
+            
+        nacci = countFibbo(i);  
+        System.out.print(nacci+" ");  
+           }   
+    }  
+    //Fungsi Rekusif nya  
+    public static int countFibbo(int n){    
+        int fib;  
+        if(n==0)  
+            return 0;  
+        if(n==1)  
+            return(1);   
+        else  
+            fib = countFibbo(n-1) + countFibbo(n-2);             
+        return fib;  
+    }  
+ }  
